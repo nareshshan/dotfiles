@@ -65,5 +65,8 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 fi
 
 # rbenv
-alias rbenv_gd="rbenv gemset delete $(rbenv version | awk '{print $1}') $(basename $(pwd))"
+function rbenv_gd {
+  echo `rbenv gemset delete $(rbenv version | awk '{print $1}') $(basename $(pwd))`
+}
+
 eval "$(rbenv init -)"
