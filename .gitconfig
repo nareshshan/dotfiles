@@ -4,6 +4,7 @@
 [alias]
   co = checkout
   ci = commit
+  dic = diff --cached
 [color]
   diff = auto
   status = auto
