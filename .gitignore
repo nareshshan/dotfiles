@@ -1,3 +1,4 @@
+.vim/.netrwhist
 .DS_Store
 .svn
 *~
@@ -7,3 +8,12 @@
 #*
 */#*
 */#.*#
+.emacs.d/auto-save-list
+.emacs.d/backups/*
+.emacs.d/elpa/*
+.emacs.d/swank/*
+.emacs.d/.smex-items
+.emacs.d/places
+.emacs.d/eshell
+.emacs.d/url
+
