@@ -14,11 +14,10 @@
                       starter-kit-bindings
                       starter-kit-ruby
                       starter-kit-eshell
-                      haskell-mode
-                      go-mode
                       clojure-mode
                       clojure-test-mode
                       clojurescript-mode
+                      nrepl
                       color-theme
                       color-theme-solarized)
                       
@@ -105,3 +104,4 @@
 
 ;; where did this go in esk?
 (global-set-key (kbd "C-x \\") 'align-regexp)
+(global-set-key (kbd "s-3") '(lambda () (interactive) (insert "#")))
