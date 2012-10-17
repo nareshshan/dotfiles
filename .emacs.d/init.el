@@ -9,18 +9,15 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit
+(defvar my-packages '(color-theme
+                      color-theme-solarized-dark
+                      starter-kit
                       starter-kit-lisp
                       starter-kit-bindings
                       starter-kit-ruby
                       starter-kit-eshell
                       clojure-mode
-                      clojure-test-mode
-                      clojurescript-mode
-                      nrepl
-                      color-theme
-                      color-theme-solarized)
-                      
+                      clojure-test-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -59,14 +56,14 @@
 (require 'highlight)
 (require 'eval-sexp-fu)
 
-;; use inconsolata
-(set-face-attribute 'default nil
-                    :family "Inconsolata"
-                    :height 140)
-
 ;; show line numbers
 (when window-system (global-linum-mode t))
 
+;; use inconsolata
+(set-face-attribute 'default nil
+                    :family "Inconsolata"
+                    :height 160)
+  
 ;; tabs are 2 spaces
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
@@ -77,7 +74,7 @@
   (eval-after-load 'color-theme
     (progn
       (require 'color-theme-solarized)
-      (color-theme-solarized-light))))
+      (color-theme-solarized-dark))))
 
 ;; KEYBINDINGS
 ;;--------------------------------------------------
