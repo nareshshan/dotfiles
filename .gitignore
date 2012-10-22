@@ -1,13 +1,11 @@
 .vim/.netrwhist
 .DS_Store
-.svn
-*~
 *.swp
 .*.swp
-.\#*.*
-#*
-*/#*
-*/#.*#
+.svn
+*~
+.\#*
+\#*#
 .emacs.d/auto-save-list
 .emacs.d/backups/*
 .emacs.d/elpa/*
