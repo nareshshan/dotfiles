@@ -93,12 +93,9 @@
 ;; steve yegges's suggested keybindings
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
-
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 
 (global-set-key [f5] 'call-last-kbd-macro)
-
-;; where did this go in esk?
 (global-set-key (kbd "C-x \\") 'align-regexp)
-(global-set-key (kbd "s-3") '(lambda () (interactive) (insert "#")))
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
