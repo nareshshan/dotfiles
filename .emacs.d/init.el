@@ -10,7 +10,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '(color-theme
-                      color-theme-solarized-dark
+                      color-theme-solarized
                       starter-kit
                       starter-kit-lisp
                       starter-kit-bindings
