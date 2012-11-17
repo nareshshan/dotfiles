@@ -18,3 +18,5 @@
   helper = osxkeychain
 [github]
 	user = trgoodwin
+[push]
+	default = simple
