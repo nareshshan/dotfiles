@@ -20,6 +20,10 @@ alias c='clear'
 alias ep='vi $HOME/.bashrc'
 alias rp='source $HOME/.bashrc'
 
+alias fwd="cd $HOME/src/forward"
+alias ghub="cd $HOME/src/github"
+alias hero="cd $HOME/src/heroku"
+
 # git aliases
 alias gst='git status'
 alias gl='git pull'
