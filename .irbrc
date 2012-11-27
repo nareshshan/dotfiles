@@ -1,10 +1,9 @@
 require 'rubygems'
 require 'irb/completion'
 require 'irb/ext/save-history'
-require 'pp'
-require 'wirble'
 
 begin
+  require 'wirble'
   Wirble.init
   Wirble.colorize
 rescue LoadError => e
