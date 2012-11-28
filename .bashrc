@@ -20,8 +20,17 @@ alias c='clear'
 alias ep='vi $HOME/.bashrc'
 alias rp='source $HOME/.bashrc'
 
-alias fwd="cd $HOME/src/forward"
-alias ghub="cd $HOME/src/github"
+fwd_home="$HOME/src/forward"
+alias fwd="cd $fwd_home"
+alias carweb="cd $fwd_home/uswitch-car-insurance"
+alias caragg="cd $fwd_home/car-insurance-aggregator"
+alias fwdpup="cd $fwd_home/forward-puppet"
+alias fwdami="cd $fwd_home/uswitch-ami-tools"
+
+ghub_home="$HOME/src/github"
+alias ghub="cd $ghub_home"
+alias dotfiles="cd $ghub_home/dotfiles"
+
 alias hero="cd $HOME/src/heroku"
 
 # git aliases
