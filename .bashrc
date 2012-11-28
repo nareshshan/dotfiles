@@ -61,7 +61,7 @@ function rbenv_gd {
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-
+export SSL_CERT_FILE="/usr/local/etc/openssl/certs/cert.pem"
 # functions ---------------------------------------------------
   #cat video1.avi video2.avi videon.avi > output.avi
   #mencoder -forceidx -oac copy -ovc copy output.avi -o output_final.avi
@@ -70,8 +70,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 function avi2mp4 {
   HandBrakeCLI -i $1 -o ${1/.avi/.mp4} --preset="iPad" 
 }
-
-
 
 # set PS1 with git completions --------------------------------
 GIT_PS1_SHOWDIRTYSTATE=true
