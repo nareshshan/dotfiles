@@ -50,6 +50,13 @@ alias grm='gst | awk '\''/deleted/ {print $3}'\'' | xargs git rm'
 alias start_pgsql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stop_pgsql='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
+
+# rbenv
+alias rebundle="rbenv_gd && gem install bundler && bundle install"
+function rbenv_gd {
+  echo `rbenv gemset delete $(rbenv version | awk '{print $1}') $(basename $(pwd))`
+}
+
 # paths -------------------------------------------------------
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
@@ -64,10 +71,6 @@ function avi2mp4 {
   HandBrakeCLI -i $1 -o ${1/.avi/.mp4} --preset="iPad" 
 }
 
-# rbenv
-function rbenv_gd {
-  echo `rbenv gemset delete $(rbenv version | awk '{print $1}') $(basename $(pwd))`
-}
 
 
 # set PS1 with git completions --------------------------------
