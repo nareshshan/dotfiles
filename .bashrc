@@ -24,6 +24,7 @@ fwd_home="$HOME/src/forward"
 alias fwd="cd $fwd_home"
 alias carweb="cd $fwd_home/uswitch-car-insurance"
 alias caragg="cd $fwd_home/car-insurance-aggregator"
+alias carrep="cd $fwd_home/uswitch-car-insurance-reporting"
 alias fwdpup="cd $fwd_home/forward-puppet"
 alias fwdami="cd $fwd_home/uswitch-ami-tools"
 
