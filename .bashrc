@@ -79,4 +79,4 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   export PS1='\[\033[01;34m\]\w\[\033[00m\]\[\033[01;32m\]$(__git_ps1 " (%s)")\[\033[00m\] \n$ '
 fi
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
