@@ -1,0 +1,6 @@
+ServerAliveInterval 10
+
+Host *.amazonaws.com
+    Port 8008
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
