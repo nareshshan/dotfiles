@@ -57,7 +57,7 @@
 (require 'eval-sexp-fu)
 
 ;; show line numbers
-(when window-system (global-linum-mode t))
+(global-linum-mode t)
 
 ;; use inconsolata
 (set-face-attribute 'default nil
@@ -78,7 +78,6 @@
 
 ;; KEYBINDINGS
 ;;--------------------------------------------------
-
 (defun osxp ()
   (string= "darwin" system-type))
 
