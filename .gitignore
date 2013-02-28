@@ -4,6 +4,8 @@
 .DS_Store
 *.swp
 .*.swp
+.emacs.d/.smex-items
+.emacs.d/places
 .emacs.d/auto-save-list
 .emacs.d/backups
 .emacs.d/elpa
