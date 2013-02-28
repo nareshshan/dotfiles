@@ -1,9 +1,8 @@
 ;; PACKAGES
 ;;--------------------------------------------------
-
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -17,7 +16,8 @@
                       starter-kit-ruby
                       starter-kit-eshell
                       clojure-mode
-                      clojure-test-mode)
+                      clojure-test-mode
+                      nrepl)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -26,7 +26,6 @@
 
 ;; ENVIRONMENT
 ;;--------------------------------------------------
-
 ;; fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
