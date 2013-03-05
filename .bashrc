@@ -22,16 +22,17 @@ alias rp='source $HOME/.bashrc'
 
 fwd_home="$HOME/src/forward"
 alias fwd="cd $fwd_home"
+
 alias carweb="cd $fwd_home/uswitch-car-insurance"
 alias caragg="cd $fwd_home/car-insurance-aggregator"
 alias carrep="cd $fwd_home/uswitch-car-insurance-reporting"
 alias fwdpup="cd $fwd_home/forward-puppet"
+alias f="fab -f $fwd_home/forward-puppet/fabfile.py"
 alias fwdami="cd $fwd_home/uswitch-ami-tools"
 
 ghub_home="$HOME/src/github"
 alias ghub="cd $ghub_home"
 alias dotfiles="cd $ghub_home/dotfiles"
-
 alias hero="cd $HOME/src/heroku"
 
 # git aliases
