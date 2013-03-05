@@ -1,6 +1,13 @@
 ServerAliveInterval 10
 
 Host *.amazonaws.com
-    Port 8008
-    UserKnownHostsFile /dev/null
-    StrictHostKeyChecking no
+  User deploy
+  Port 8008
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+
+Host *.uswitchinternal.com
+  User deploy
+  Port 8008
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
