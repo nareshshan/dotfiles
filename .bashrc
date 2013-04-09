@@ -20,19 +20,28 @@ alias c='clear'
 alias ep='vi $HOME/.bashrc'
 alias rp='source $HOME/.bashrc'
 
-fwd_home="$HOME/src/forward"
-alias fwd="cd $fwd_home"
-
-alias carweb="cd $fwd_home/uswitch-car-insurance"
-alias caragg="cd $fwd_home/car-insurance-aggregator"
-alias carrep="cd $fwd_home/uswitch-car-insurance-reporting"
-alias pup="cd $fwd_home/uswitch-puppet"
-alias f="fab -f $fwd_home/uswitch-puppet/fabfile.py"
+usw_home="$HOME/src/uswitch" 
+alias usw="cd $usw_home"
+alias carweb="cd $usw_home/car-insurance-web"
+alias caragg="cd $usw_home/car-insurance-aggregator"
+alias carrep="cd $usw_home/car-insurance-reporting"
+alias carloo="cd $usw_home/car-lookup"
+alias pup="cd $usw_home/puppet"
+alias f="fab -f $usw_home/puppet/fabfile.py"
 
 ghub_home="$HOME/src/github"
 alias ghub="cd $ghub_home"
 alias dotfiles="cd $ghub_home/dotfiles"
 alias hero="cd $HOME/src/heroku"
+
+# brew 
+function brew_old {
+  local formula=$1
+  local version=$2
+  local cmd="cd $(brew --prefix) && $(brew versions $formula | grep $version |cut -c 10-) && brew unlink $formula && brew install $formula && git reset . && git co . && cd - && brew switch $formula $version"
+  echo $cmd
+  $cmd
+}
 
 # git aliases
 alias gst='git status'
