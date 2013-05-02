@@ -20,28 +20,10 @@ alias c='clear'
 alias ep='vi $HOME/.bashrc'
 alias rp='source $HOME/.bashrc'
 
-usw_home="$HOME/src/uswitch" 
-alias usw="cd $usw_home"
-alias carweb="cd $usw_home/car-insurance-web"
-alias caragg="cd $usw_home/car-insurance-aggregator"
-alias carrep="cd $usw_home/car-insurance-reporting"
-alias carloo="cd $usw_home/car-lookup"
-alias pup="cd $usw_home/puppet"
-alias f="fab -f $usw_home/puppet/fabfile.py"
-
-ghub_home="$HOME/src/github"
-alias ghub="cd $ghub_home"
-alias dotfiles="cd $ghub_home/dotfiles"
-alias hero="cd $HOME/src/heroku"
-
-# brew 
-function brew_old {
-  local formula=$1
-  local version=$2
-  local cmd="cd $(brew --prefix) && $(brew versions $formula | grep $version |cut -c 10-) && brew unlink $formula && brew install $formula && git reset . && git co . && cd - && brew switch $formula $version"
-  echo $cmd
-  $cmd
-}
+proj_home="$HOME/Projects" 
+alias usw="cd $proj_home"
+alias carweb="cd $proj_home/car-insurance-web"
+alias dotfiles="cd $proj_homes/dotfiles"
 
 # git aliases
 alias gst='git status'
@@ -56,11 +38,6 @@ alias gba='git branch -a'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias grm='gst | awk '\''/deleted/ {print $3}'\'' | xargs git rm'
 
-# postgresql
-alias start_pgsql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stop_pgsql='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
-
 # rbenv
 alias rebundle="rbenv_gd && gem install bundler && bundle install"
 function rbenv_gd {
@@ -71,15 +48,6 @@ function rbenv_gd {
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
-export SSL_CERT_FILE="/usr/local/etc/openssl/certs/cert.pem"
-# functions ---------------------------------------------------
-  #cat video1.avi video2.avi videon.avi > output.avi
-  #mencoder -forceidx -oac copy -ovc copy output.avi -o output_final.avi
-  #rm output.avi
-  #http://media.stefpause.co.uk/mplayer_osx/mencoder.zip
-function avi2mp4 {
-  HandBrakeCLI -i $1 -o ${1/.avi/.mp4} --preset="iPad" 
-}
 
 # set PS1 with git completions --------------------------------
 GIT_PS1_SHOWDIRTYSTATE=true
