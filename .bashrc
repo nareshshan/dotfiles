@@ -16,7 +16,7 @@ alias la="ls -lach"
 alias lsd="ls | grep ^d"
 alias nerd='vim -c NERDTree'
 alias ip='ifconfig'
-alias piepline='bundle exec rake assets:precompile'
+alias pipeline='bundle exec rake assets:precompile'
 
 alias c='clear'
 alias ep='vi $HOME/.bashrc'
