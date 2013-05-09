@@ -15,6 +15,7 @@ alias ll="ls -la"
 alias la="ls -lach"
 alias lsd="ls | grep ^d"
 alias nerd='vim -c NERDTree'
+alias ip='ifconfig'
 
 alias c='clear'
 alias ep='vi $HOME/.bashrc'
