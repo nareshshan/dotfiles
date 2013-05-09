@@ -23,7 +23,8 @@ alias rp='source $HOME/.bashrc'
 proj_home="$HOME/Projects" 
 alias usw="cd $proj_home"
 alias carweb="cd $proj_home/car-insurance-web"
-alias dotfiles="cd $proj_homes/dotfiles"
+alias team="cd $proj_home/team-uswitch"
+alias dotfiles="cd $proj_home/dotfiles"
 
 # git aliases
 alias gst='git status'
