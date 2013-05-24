@@ -27,6 +27,7 @@ alias usw="cd $proj_home"
 alias carweb="cd $proj_home/car-insurance-web"
 alias team="cd $proj_home/team-uswitch"
 alias dotfiles="cd $proj_home/dotfiles"
+alias f="fab -f $proj_home/puppet/fabfile.py"
 
 # git aliases
 alias gst='git status'
