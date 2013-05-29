@@ -52,6 +52,7 @@ function rbenv_gd {
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/Projects/development/sdk/platform-tools/:$PATH"
 
 # set PS1 with git completions --------------------------------
 GIT_PS1_SHOWDIRTYSTATE=true
