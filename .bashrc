@@ -17,6 +17,7 @@ alias lsd="ls | grep ^d"
 alias nerd='vim -c NERDTree'
 alias ip='ifconfig'
 alias pipeline='bundle exec rake assets:precompile'
+alias device='adb forward tcp:9222 localabstract:chrome_devtools_remote'
 
 alias c='clear'
 alias ep='vi $HOME/.bashrc'
